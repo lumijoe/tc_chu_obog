@@ -1,0 +1,211 @@
+/* ===========================================
+ *  ヘッダー
+ * ===========================================
+ */
+@use '../setting/config' as *;
+
+.header {
+    .modal.show .modal-dialog {
+        top: 50%;
+        transform: translate(0, -50%) !important;
+    }
+    .modal {
+        .modal-title {
+            margin-bottom: 0;
+            line-height: var(--bs-modal-title-line-height);
+            text-align: center;
+            width: 100%;
+            transform: translateX(15.5px);
+            color: #29318a;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+            font-size: 21px;
+        }
+        .modal-header {
+            padding-top: 40px!important;
+        }
+        .form-label {
+            margin-bottom: 20px!important;
+        }
+        .form-check-input {
+            margin-bottom: 20px;
+        }
+        .mb-3 {
+            margin-bottom: 20px!important;
+        }
+        .modal-login {
+            button.btn {
+                background-color: #29318a;
+                color: white;
+                width: 62%!important;
+                height: 60px!important;
+                font-size: 14px;
+                border-radius: 99px!important;
+                margin-top: 30px !important;
+                margin-bottom: 40px !important;
+                align-items: center;
+                margin-right: 19%!important;
+                margin-left: 19%!important;
+            }
+        }
+    }
+    background: red;
+    height: 104px;
+    position: relative;
+    .btn {
+        background-color:#29318a;
+        color: white;
+        border-radius: 0px!important;
+        margin: 0!important;
+        margin-top: -8px!important;
+        margin-bottom: -8px!important;
+        a {
+            color: white;
+            text-decoration: none!important;
+            font-size: 14px;
+        }
+    }
+    .btn-login {
+        position: fixed;
+        z-index: 9000;
+    }
+    .top-ttl {
+        padding-left: 32px;
+        color: #29318a;
+        font-size: clamp(16px, 2vw, 25px);
+    }
+    .btn:hover {
+        opacity: 0.8;
+    }
+    h1 {
+        color: #29318a;
+    }
+    .btn+.btn {
+        margin-left: 1px!important;
+    }
+    .navbar-toggler {
+        margin-right: 3%;
+        z-index: 6000;
+    }
+    .navbar-collapse {
+        // display: flex;
+        justify-content: flex-end!important;
+    }
+    .container-fluid {
+        padding-right: 0!important;
+        padding-left: 3%;
+        h1 {
+            margin-bottom: 0px!important;
+            z-index: 6000;
+        }
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5000;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .nav-link:hover {
+        color: #29318a;
+    }
+    .nav-only-cta {
+        padding-left: 0px!important;
+        li {
+            background-color: #29318a;
+            width: 100%;
+            border-radius: 2px;
+            img {
+                margin-right: 10px;
+            }
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                padding: 0.5rem 1rem;
+            }
+        }
+        li:hover {
+            opacity: 0.8;
+        }
+        li + li {
+            margin-top: 20px;
+        }
+
+    }
+    @media (max-width: 991px) {
+        .navbar-collapse {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100dvh;
+          padding: 8rem 2rem 6rem;
+          background-color: white;
+          z-index: 5000;
+          overflow: auto;
+        }
+      
+        .navbar.is-open {
+          display: block;
+          position: fixed;
+          width: 100%;
+        }
+      
+        body.no-scroll {
+          overflow: hidden;
+          height: 100vh;
+        }
+    }
+    @media (max-width: 538px) {
+        .top-ttl {
+            padding-left: 10px;
+        }
+        .navbar-brand {
+            img {
+                width: auto;
+                height: 31px;
+            }
+        }
+    }
+    @media (max-width: 394px) {
+        .top-ttl {
+            padding-left: 8px;
+            font-size: 12px;
+        }
+        .navbar-brand {
+            img {
+                width: auto;
+                height: 21px;
+            }
+        }
+    }
+    @media (max-width: 394px) {
+        .navbar-brand {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        height: 100%
+    }
+}
+.login-modal {
+    z-index: 9000;
+}
+// header外
+.modal-backdrop {
+        --bs-backdrop-zindex: 8000 !important;
+        --bs-backdrop-bg: #000;
+        --bs-backdrop-opacity: 0.7 !important;
+    }
+
